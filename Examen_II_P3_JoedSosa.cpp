@@ -1,20 +1,55 @@
-// Examen_II_P3_JoedSosa.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+#include "Tabla.h"
 
 #include <iostream>
+#include <string>
+// recibe una referencia de tabla del menu para simplemente leer los metodos de la clase Tabla
+void menu(Tabla& tabla) {
+    int opcion;
 
-int main()
-{
-    std::cout << "Hello World!\n";
+    do {
+        cout << "-------------Menu------------" << endl;
+        cout << "1. Cargar archivo de Registro" << endl;
+        cout << "2. Imprimir Tabla" << endl;
+        cout << "3. Fusion de columnas" << endl;
+        cout << "4. Guardar fusion de columnas" << endl;
+        cout << "5. Salir" << endl;
+        cout << "Ingrese la opcion: ";
+        cin >> opcion;
+
+        switch (opcion) {
+        case 1: {
+            tabla.cargarArchivoRegistros();
+            break;
+        }
+        case 2: {
+            tabla.imprimirTabla();
+            break;
+        }
+        case 3: {
+            tabla.fusionarColumnas();
+            break;
+        }
+        case 4: {
+            tabla.guardarFusionColumna();
+            break;
+        }
+        case 5: {
+            cout << "Saliendo del programa..." << endl;
+            tabla.~Tabla();
+            break;
+        }
+        default: {
+            cout << "Opción invalida. Intente nuevamente." << endl;
+            break;
+        }
+       }
+
+        cout << endl;
+    } while (opcion != 5);
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+// se crea el objeto tabla que es mandado al menu para que pueda accedera a los metodos que estan dentro de la clase tabla
+int main() {
+    Tabla tabla;
+    menu(tabla);
+    return 0;
+}

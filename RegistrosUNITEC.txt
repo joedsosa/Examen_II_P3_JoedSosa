@@ -1,0 +1,7 @@
+Walter,Reyes,21,20,50,25
+Monica,Castillo,20,25,50,25
+Ronal,Zuniga,21,25,40,20
+Mike,Tyzon,56,15,25,15
+Ewan,Mcgregor,52,25,50,25
+Ian,Johsnon,45,10,10,10
+Felipe,Garay,80,21,25,10

@@ -1,0 +1,8 @@
+NombreCompleto,Edad,NotaFinal,EstadoClase
+Walter Reyes,21,95,Aprobo
+Monica Castillo,20,100,Aprobo
+Ronal Zuniga,21,85,Aprobo
+Mike Tyzon,56,55,Reprobo
+Ewan Mcgregor,52,100,Aprobo
+Ian Johsnon,45,30,Reprobo
+Felipe Garay,80,56,Reprobo
