@@ -8,5 +8,5 @@ using namespace std;
 template <class T >
 class Columna {
 public:
-    vector<T> datosColumna;
+	vector<T> datosColumna;
 };
